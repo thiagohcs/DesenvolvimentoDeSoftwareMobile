@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.quizicka"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.quizicka.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.quizicka.QuestaoUmActivity"
+            android:label="@string/title_activity_questao_um" >
+        </activity>
+        <activity
+            android:name="com.example.quizicka.QuestaoDoisActivity"
+            android:label="@string/title_activity_questao_dois" >
+        </activity>
+        <activity
+            android:name="com.example.quizicka.QuestaoTresActivity"
+            android:label="@string/title_activity_questao_tres" >
+        </activity>
+        <activity
+            android:name="com.example.quizicka.QuestaoQuatroActivity"
+            android:label="@string/title_activity_questao_quatro" >
+        </activity>
+        <activity
+            android:name="com.example.quizicka.QuestaoCincoActivity"
+            android:label="@string/title_activity_questao_cinco" >
+        </activity>
+        <activity
+            android:name="com.example.quizicka.ResultadoActivity"
+            android:label="@string/title_activity_resultado" >
+        </activity>
+    </application>
+
+</manifest>

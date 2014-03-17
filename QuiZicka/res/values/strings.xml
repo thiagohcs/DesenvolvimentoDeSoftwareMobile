@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QuiZicka</string>
+    <string name="action_settings">Settings</string>
+    <string name="Welcome">Welcome</string>
+    <string name="Start">Start</string>
+    <string name="QuestaoUm">Qual o significado do nome "Coala" ?</string>
+    <string name="opcaoUmQuestaoUm">Charmoso</string>
+    <string name="opcaoDoisQuestaoUm">Sem pelo</string>
+    <string name="opcaoTresQuestaoUm">Sem água</string>
+    <string name="opcaoQuatroQuestaoUm">Sem dentes</string>
+    <string name="ConfirmaQuestao">Confirmar</string>
+    <string name="QuestaoDois">Depois que saiu da Apple, qual empresa Steve Jobs fundou em 1989 ?</string>
+    <string name="opcaoUmQuestaoDois">Apple III</string>
+    <string name="opcaoDoisQuestaoDois">NeXT</string>
+    <string name="opcaoTresQuestaoDois">OS X</string>
+    <string name="opcaoQuatroQuestaoDois">Microsoft</string>
+    <string name="QuestaoTres">Em qual país possui a conexão mais rápida de internet?</string>
+    <string name="opcaoUmQuestaoTres">EUA</string>
+    <string name="opcaoDoisQuestaoTres">Brasil</string>
+    <string name="opcaoTresQuestaoTres">Hon Kong</string>
+    <string name="opcaoQuatroQuestaoTres">China</string>
+    <string name="QuestaoQuatro">Questão 4</string>
+    <string name="opcaoUmQuestaoQuatro">op1</string>
+    <string name="opcaoDoisQuestaoQuatro">op2</string>
+    <string name="opcaoTresQuestaoQuatro">op3</string>
+    <string name="opcaoQuatroQuestaoQuatro">op4</string>
+    <string name="QuestaoCinco">Questão 5</string>
+    <string name="opcaoUmQuestaoCinco">op1</string>
+    <string name="opcaoDoisQuestaoCinco">op2</string>
+    <string name="opcaoTresQuestaoCinco">op3</string>
+    <string name="opcaoQuatroQuestaoCinco">op4</string>
+    <string name="title_activity_end">EndActivity</string>
+    <string name="End">End Game</string>
+    <string name="Resultado"></string>
+    <string name="JogarNovamente">Jogar novamente?</string>
+    <string name="Sair">Sair</string>
+    <string name="title_activity_questao_um">QuestaoUmActivity</string>
+    <string name="title_activity_questao_dois">QuestaoDoisActivity</string>
+    <string name="title_activity_questao_tres">QuestaoTresActivity</string>
+    <string name="title_activity_questao_quatro">QuestaoQuatroActivity</string>
+    <string name="title_activity_questao_cinco">QuestaoCincoActivity</string>
+    <string name="title_activity_resultado">ResultadoActivity</string>
+
+</resources>
