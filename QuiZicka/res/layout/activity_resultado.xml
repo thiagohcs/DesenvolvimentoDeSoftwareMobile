@@ -29,4 +29,21 @@
         android:text="@string/Resultado"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
+    <Button
+        android:id="@+id/JogarNovamente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMsg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/JogarNovamente" />
+
+    <Button
+        android:id="@+id/Sair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/JogarNovamente"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Sair" />
+
 </RelativeLayout>

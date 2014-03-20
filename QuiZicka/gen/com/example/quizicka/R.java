@@ -24,12 +24,14 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
+        public static final int JogarNovamente=0x7f080027;
         public static final int QuestaoCinco=0x7f080002;
         public static final int QuestaoDois=0x7f080009;
         public static final int QuestaoQuatro=0x7f080011;
         public static final int QuestaoTres=0x7f080019;
         public static final int QuestaoUm=0x7f080020;
-        public static final int action_settings=0x7f080027;
+        public static final int Sair=0x7f080028;
+        public static final int action_settings=0x7f080029;
         public static final int buttonConfimarQ1=0x7f08001e;
         public static final int buttonConfimarQ2=0x7f08000a;
         public static final int buttonConfirmaQ3=0x7f080017;

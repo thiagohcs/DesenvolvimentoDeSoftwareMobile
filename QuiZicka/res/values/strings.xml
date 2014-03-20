@@ -34,7 +34,7 @@
     <string name="title_activity_end">EndActivity</string>
     <string name="End">End Game</string>
     <string name="Resultado"></string>
-    <string name="JogarNovamente">Jogar novamente?</string>
+    <string name="JogarNovamente">Jogar novamente</string>
     <string name="Sair">Sair</string>
     <string name="title_activity_questao_um">QuestaoUmActivity</string>
     <string name="title_activity_questao_dois">QuestaoDoisActivity</string>
