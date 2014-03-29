@@ -10,46 +10,46 @@
         android:orientation="vertical" >
 
         <CheckBox
-            android:id="@+id/checkBox1"
+            android:id="@+id/tab1op1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab1op1" />
 
         <CheckBox
-            android:id="@+id/checkBox2"
+            android:id="@+id/tab1op2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab1op2" />
 
         <CheckBox
-            android:id="@+id/checkBox3"
+            android:id="@+id/tab1op3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab1op3" />
 
         <CheckBox
-            android:id="@+id/checkBox4"
+            android:id="@+id/tab1op4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab1op4" />
 
         <CheckBox
-            android:id="@+id/checkBox5"
+            android:id="@+id/tab1op5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab1op5" />
 
         <CheckBox
-            android:id="@+id/checkBox6"
+            android:id="@+id/tab1op6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab1op6" />
 
         <CheckBox
-            android:id="@+id/checkBox7"
+            android:id="@+id/tab1op7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab1op7" />
     </LinearLayout>
 
     <LinearLayout
@@ -59,47 +59,37 @@
         android:orientation="vertical" >
 
         <CheckBox
-            android:id="@+id/checkBox8"
+            android:id="@+id/tab2op1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab2op1" />
 
         <CheckBox
-            android:id="@+id/checkBox9"
+            android:id="@+id/tab2op2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab2op2" />
 
         <CheckBox
-            android:id="@+id/checkBox10"
+            android:id="@+id/tab2op3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab2op3" />
 
         <CheckBox
-            android:id="@+id/checkBox11"
+            android:id="@+id/tab2op4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab2op4" />
 
         <CheckBox
-            android:id="@+id/checkBox12"
+            android:id="@+id/tab2op5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab2op5" />
 
-        <CheckBox
-            android:id="@+id/checkBox13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CheckBox" />
-
-        <CheckBox
-            android:id="@+id/checkBox14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CheckBox" />
-    </LinearLayout>
+        
+          </LinearLayout>
 
     <LinearLayout
         android:id="@+id/tab3"
@@ -109,46 +99,46 @@
 
        
         <CheckBox
-            android:id="@+id/checkBox15"
+            android:id="@+id/tab3op1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab3op1" />
 
         <CheckBox
-            android:id="@+id/checkBox16"
+            android:id="@+id/tab3op2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab3op2" />
 
         <CheckBox
-            android:id="@+id/checkBox17"
+            android:id="@+id/tab3op3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab3op3" />
 
         <CheckBox
-            android:id="@+id/checkBox18"
+            android:id="@+id/tab3op4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab3op4" />
 
         <CheckBox
-            android:id="@+id/checkBox19"
+            android:id="@+id/tab3op5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab3op5" />
 
         <CheckBox
-            android:id="@+id/checkBox20"
+            android:id="@+id/tab3op6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab3op6" />
 
         <CheckBox
-            android:id="@+id/checkBox21"
+            android:id="@+id/tab3op7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:text="@string/tab3op7" />
     </LinearLayout>
 
 </FrameLayout>

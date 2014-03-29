@@ -4,5 +4,25 @@
     <string name="app_name">Checklist Viagem</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="tab1op1">Sabonete</string>
+    <string name="tab1op2">Shampoo</string>
+    <string name="tab1op3">Desodorate</string>
+    <string name="tab1op4">Toalha</string>
+    <string name="tab1op5">escova de dente</string>
+    <string name="tab1op6">Pasta de dente</string>
+    <string name="tab1op7">Barbeador</string>
+    <string name="tab2op1">CPF</string>
+    <string name="tab2op2">RG</string>
+    <string name="tab2op3">Passaporte</string>
+    <string name="tab2op4">Plano de sáude</string>
+    <string name="tab2op5">Carteira de motorista</string>
+    <string name="tab3op1"></string>
+    <string name="tab3op2"></string>
+    <string name="tab3op3"></string>
+    <string name="tab3op4"></string>
+    <string name="tab3op5"></string>
+    <string name="tab3op6"></string>
+    <string name="tab3op7"></string>
+    	
 
 </resources>

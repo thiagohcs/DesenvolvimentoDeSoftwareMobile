@@ -17,11 +17,11 @@ public class MainActivity extends TabActivity {
 		LayoutInflater.from(this).inflate(R.layout.abas,
 				tabHost.getTabContentView(), true);
 		
-		tabHost.addTab(tabHost.newTabSpec("tab1")
+		tabHost.addTab(tabHost.newTabSpec("Higiene")
 				.setIndicator("Aba 1").setContent(R.id.tab1));
-		tabHost.addTab(tabHost.newTabSpec("tab2")
+		tabHost.addTab(tabHost.newTabSpec("Documentos")
 				.setIndicator("Aba 2").setContent(R.id.tab2));
-		tabHost.addTab(tabHost.newTabSpec("tab3")
+		tabHost.addTab(tabHost.newTabSpec("Vestuário")
 				.setIndicator("Aba 3").setContent(R.id.tab3));
 		
 		setContentView(tabHost);
