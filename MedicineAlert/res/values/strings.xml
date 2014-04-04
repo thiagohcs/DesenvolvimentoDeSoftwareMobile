@@ -8,5 +8,6 @@
     <string name="searchRemedio">Consultar Remédio</string>
     <string name="title_activity_cadastra_remedio">CadastraRemedioActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_consulta_horarios_remedios">ConsultaHorariosRemediosActivity</string>
 
 </resources>
