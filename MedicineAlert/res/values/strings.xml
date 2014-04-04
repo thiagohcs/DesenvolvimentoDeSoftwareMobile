@@ -3,6 +3,10 @@
 
     <string name="app_name">MedicineAlert</string>
     <string name="action_settings">Settings</string>
+    <string name="bemVindo">Bem Vindo!</string>
+    <string name="addRemedio">Cadastrar Remédio</string>
+    <string name="searchRemedio">Consultar Remédio!</string>
+    <string name="title_activity_cadastra_remedio">CadastraRemedioActivity</string>
     <string name="hello_world">Hello world!</string>
 
 </resources>
