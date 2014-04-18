@@ -18,20 +18,11 @@
         android:layout_marginTop="28dp"
         android:ems="10" />
 
-    <SearchView
-        android:id="@+id/searchView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_toRightOf="@+id/editText1" >
-    </SearchView>
-
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editText1"
-        android:layout_alignRight="@+id/searchView1"
         android:layout_below="@+id/editText1"
         android:layout_marginTop="17dp" >
 

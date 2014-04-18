@@ -9,7 +9,7 @@
     tools:context=".HomeActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/NomeRemedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,20 +19,20 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btCadadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/NomeRemedio"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:text="@string/addRemedio" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/button1"
-        android:layout_below="@+id/button1"
+        android:layout_alignRight="@+id/btCadadastro"
+        android:layout_below="@+id/btCadadastro"
         android:layout_marginTop="20dp"
         android:text="@string/searchRemedio" />
 
