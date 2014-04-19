@@ -9,7 +9,7 @@
     tools:context=".CadastraRemedioActivity" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/txtNomeRemedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/NomeRemedio"
@@ -21,7 +21,7 @@
     </EditText>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txtDosagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/dosagemRemedio"
@@ -29,7 +29,7 @@
         android:ems="10" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/txtQtDias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/qtDiasRemedio"
@@ -75,24 +75,24 @@
         android:id="@+id/dtInicioRemedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_below="@+id/editText3"
+        android:layout_alignLeft="@+id/txtQtDias"
+        android:layout_below="@+id/txtQtDias"
         android:text="Data Inicio" />
 
     <TextView
         android:id="@+id/qtDiasRemedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/txtDosagem"
+        android:layout_below="@+id/txtDosagem"
         android:text="Quantos dias vai tomar o remédio?" />
 
     <TextView
         android:id="@+id/dosagemRemedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/txtNomeRemedio"
+        android:layout_below="@+id/txtNomeRemedio"
         android:text="Dosagem" />
 
     <TextView
@@ -105,7 +105,7 @@
         android:text="Nome do remédio" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtNomeUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/confCadastro"
@@ -117,7 +117,7 @@
         android:id="@+id/nomeUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editText4"
+        android:layout_above="@+id/txtNomeUsuario"
         android:layout_alignLeft="@+id/cadastroRemedioDate"
         android:layout_marginBottom="18dp"
         android:text="Nome do usuário" />

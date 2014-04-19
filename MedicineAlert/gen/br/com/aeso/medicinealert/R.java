@@ -33,15 +33,15 @@ public final class R {
         public static final int confCadastro=0x7f080009;
         public static final int dosagemRemedio=0x7f080003;
         public static final int dtInicioRemedio=0x7f080007;
-        public static final int editText1=0x7f080000;
-        public static final int editText2=0x7f080002;
-        public static final int editText3=0x7f080004;
-        public static final int editText4=0x7f08000b;
         public static final int listView1=0x7f08000e;
         public static final int nomeUsuario=0x7f08000c;
         public static final int qtDiasRemedio=0x7f080005;
         public static final int scrollView1=0x7f08000d;
         public static final int tvData=0x7f080006;
+        public static final int txtDosagem=0x7f080002;
+        public static final int txtNomeRemedio=0x7f080000;
+        public static final int txtNomeUsuario=0x7f08000b;
+        public static final int txtQtDias=0x7f080004;
     }
     public static final class layout {
         public static final int activity_cadastra_remedio=0x7f030000;
