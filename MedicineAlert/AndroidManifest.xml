@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="br.com.aeso.medicinealert.HomeActivity"
+            android:name="br.com.aeso.medicinealert.activity.HomeActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,11 +23,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="br.com.aeso.medicinealert.CadastraRemedioActivity"
+            android:name="br.com.aeso.medicinealert.activity.CadastraRemedioActivity"
             android:label="@string/title_activity_cadastra_remedio" >
         </activity>
         <activity
-            android:name="br.com.aeso.medicinealert.ConsultaHorariosRemediosActivity"
+            android:name="br.com.aeso.medicinealert.activity.ConsultaHorariosRemediosActivity"
             android:label="@string/title_activity_consulta_horarios_remedios" >
         </activity>
     </application>

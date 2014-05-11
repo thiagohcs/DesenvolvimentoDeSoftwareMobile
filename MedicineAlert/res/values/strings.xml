@@ -7,13 +7,16 @@
     <string name="addRemedio">Cadastrar Remédio</string>
     <string name="searchRemedio">Consultar Remédio</string>
     <string name="title_activity_cadastra_remedio">CadastraRemedioActivity</string>
-    <string name="hello_world">Hello world!</string>
     <string name="title_activity_consulta_horarios_remedios">ConsultaHorariosRemediosActivity</string>
-    <string name="usuario">Usuário</string>
-    <string name="nomeRemedio">Nome do remédio</string>
-   	<string name="dosagemRemedio">Dosagem</string>
-    <string name="qtDias">Quantos dias utiliza-lo?</string>
+    <string name="usuario">Usuário:</string>
+    <string name="nomeRemedio">Nome do remédio:</string>
+   	<string name="dosagemRemedio">Dosagem:</string>
+    <string name="qtdeDias">Quantidade de dias:</string>
 	<string name="qtVezesDias">Quantas vezes?</string>
-    <string name="dtInicio">Data de inicio</string>
+    <string name="dtInicio">Data de inicio:</string>
+    <string name="ml">ml</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+    
 
 </resources>

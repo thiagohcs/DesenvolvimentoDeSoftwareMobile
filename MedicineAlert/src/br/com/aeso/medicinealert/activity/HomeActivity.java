@@ -1,5 +1,6 @@
-package br.com.aeso.medicinealert;
+package br.com.aeso.medicinealert.activity;
 
+import br.com.aeso.medicinealert.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;

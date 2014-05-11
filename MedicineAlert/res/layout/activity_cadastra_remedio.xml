@@ -8,118 +8,147 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".CadastraRemedioActivity" >
 
-    <EditText
-        android:id="@+id/txtNomeRemedio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/NomeRemedio"
-        android:layout_below="@+id/NomeRemedio"
-        android:ems="10"
-        android:inputType="textPersonName" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/txtDosagem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/dosagemRemedio"
-        android:layout_below="@+id/dosagemRemedio"
-        android:ems="10" />
-
-    <EditText
-        android:id="@+id/txtQtDias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/qtDiasRemedio"
-        android:layout_below="@+id/qtDiasRemedio"
-        android:ems="10"
-        android:inputType="number" />
-
     <TextView
-        android:id="@+id/tvData"
+        android:id="@+id/txtUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/dosagemRemedio"
-        android:layout_below="@+id/dtInicioRemedio"
-        android:layout_marginTop="15dp"
-        android:text="" />
-
-    <Button
-        android:id="@+id/cancCadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/confCadastro"
-        android:layout_alignBottom="@+id/confCadastro"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="17dp"
-        android:text="Cancelar" />
-
-    <Button
-        android:id="@+id/confCadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/NomeRemedio"
-        android:text="Confirmar" />
-
-    <DatePicker
-        android:id="@+id/cadastroRemedioDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/dtInicioRemedio"
-        android:layout_below="@+id/dtInicioRemedio" />
-
-    <TextView
-        android:id="@+id/dtInicioRemedio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtQtDias"
-        android:layout_below="@+id/txtQtDias"
-        android:text="Data Inicio" />
-
-    <TextView
-        android:id="@+id/qtDiasRemedio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtDosagem"
-        android:layout_below="@+id/txtDosagem"
-        android:text="Quantos dias vai tomar o remédio?" />
-
-    <TextView
-        android:id="@+id/dosagemRemedio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtNomeRemedio"
-        android:layout_below="@+id/txtNomeRemedio"
-        android:text="Dosagem" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/usuario" />
 
     <TextView
         android:id="@+id/NomeRemedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="29dp"
-        android:text="Nome do remédio" />
+        android:layout_alignLeft="@+id/edtUsuario"
+        android:layout_below="@+id/edtUsuario"
+        android:text="@string/nomeRemedio" />
 
     <EditText
-        android:id="@+id/txtNomeUsuario"
+        android:id="@+id/edtNomeRemedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/confCadastro"
-        android:layout_alignLeft="@+id/nomeUsuario"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/edtUsuario"
+        android:layout_below="@+id/NomeRemedio"
         android:ems="10"
         android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/nomeUsuario"
+    <EditText
+        android:id="@+id/edtUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/txtNomeUsuario"
-        android:layout_alignLeft="@+id/cadastroRemedioDate"
-        android:layout_marginBottom="18dp"
-        android:text="Nome do usuário" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtUsuario"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/txtDosagemRemedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtQtDiasRemedio"
+        android:layout_alignBottom="@+id/txtQtDiasRemedio"
+        android:layout_alignLeft="@+id/edtNomeRemedio"
+        android:text="@string/dosagemRemedio" />
+
+    <TextView
+        android:id="@+id/txtQtDiasRemedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtNomeRemedio"
+        android:layout_toRightOf="@+id/NomeRemedio"
+        android:text="@string/qtdeDias" />
+
+    <EditText
+        android:id="@+id/edtDosagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtDosagemRemedio"
+        android:layout_below="@+id/txtDosagemRemedio"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtQdtDias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtQtDiasRemedio"
+        android:layout_alignRight="@+id/txtQtDiasRemedio"
+        android:layout_below="@+id/txtQtDiasRemedio"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/txtVezesDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtDosagem"
+        android:layout_below="@+id/edtDosagem"
+        android:text="@string/qtVezesDias" />
+
+    <EditText
+        android:id="@+id/edtVezesDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtVezesDia"
+        android:layout_below="@+id/txtVezesDia"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtDataInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtVezesDia"
+        android:layout_alignLeft="@+id/edtQdtDias"
+        android:text="@string/dtInicio" />
+
+    <EditText
+        android:id="@+id/edtDataInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtVezesDia"
+        android:layout_alignBottom="@+id/edtVezesDia"
+        android:layout_alignLeft="@+id/txtDataInicio"
+        android:layout_alignRight="@+id/txtQtDiasRemedio"
+        android:ems="10"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/edtDataInicio"
+        android:text="@string/cancelar" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/NomeRemedio"
+        android:text="@string/salvar" />
+
+    <DatePicker
+        android:id="@+id/dataCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCancelar"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edtVezesDia" />
+
+    <TextView
+        android:id="@+id/ml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edtDosagem"
+        android:layout_toRightOf="@+id/edtDosagem"
+        android:text="@string/ml" />
 
 </RelativeLayout>

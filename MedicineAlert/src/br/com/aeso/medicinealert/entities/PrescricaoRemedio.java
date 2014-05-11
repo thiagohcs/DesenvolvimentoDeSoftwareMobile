@@ -1,4 +1,4 @@
-package br.com.aeso.medicinealert;
+package br.com.aeso.medicinealert.entities;
 
 import java.sql.Date;
 import java.sql.Time;
@@ -8,9 +8,9 @@ public class PrescricaoRemedio {
 	
 	String usuario;
 	Date dtInicio;
-	int qtdDias;
-	int qtdVezesDia;
-	float dosagem;
+	Integer qtdDias;
+	Integer qtdVezesDia;
+	Float dosagem;
 	String nomeRemedio;
 	List listaHorarioRemedio;
 	
