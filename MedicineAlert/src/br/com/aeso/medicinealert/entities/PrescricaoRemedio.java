@@ -12,7 +12,7 @@ public class PrescricaoRemedio {
 	Integer qtdVezesDia;
 	Float dosagem;
 	String nomeRemedio;
-	List listaHorarioRemedio;
+	List<Time> listaHorarioRemedio;
 	
 	public PrescricaoRemedio(){}
 
@@ -64,11 +64,11 @@ public class PrescricaoRemedio {
 		this.nomeRemedio = nomeRemedio;
 	}
 
-	public List getListaHorarioRemedio() {
+	public List<Time> getListaHorarioRemedio() {
 		return listaHorarioRemedio;
 	}
 
-	public void setListaHorarioRemedio(List listaHorarioRemedio) {
+	public void setListaHorarioRemedio(List<Time> listaHorarioRemedio) {
 		this.listaHorarioRemedio = listaHorarioRemedio;
 	}
 	

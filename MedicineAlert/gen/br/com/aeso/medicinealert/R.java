@@ -22,12 +22,15 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int plus=0x7f020001;
+        public static final int plus1=0x7f020002;
+        public static final int search=0x7f020003;
     }
     public static final class id {
         public static final int NomeRemedio=0x7f080001;
         public static final int action_settings=0x7f080015;
-        public static final int btCadadastro=0x7f080013;
-        public static final int btConsulta=0x7f080014;
+        public static final int btCadadastro=0x7f080014;
+        public static final int btConsulta=0x7f080013;
         public static final int btnCancelar=0x7f08000c;
         public static final int btnSalvar=0x7f08000d;
         public static final int dataCadastro=0x7f08000e;

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="25dp"
         android:text="@string/bemVindo"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -23,17 +23,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/NomeRemedio"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:text="@string/addRemedio" />
+        android:layout_marginTop="114dp"
+        android:layout_toLeftOf="@+id/NomeRemedio"
+        android:background="@drawable/plus1" />
 
     <Button
         android:id="@+id/btConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/btCadadastro"
-        android:layout_below="@+id/btCadadastro"
-        android:layout_marginTop="20dp"
-        android:text="@string/searchRemedio" />
+        android:layout_alignBaseline="@+id/btCadadastro"
+        android:layout_alignBottom="@+id/btCadadastro"
+        android:layout_toRightOf="@+id/NomeRemedio"
+        android:background="@drawable/search" />
 
 </RelativeLayout>
