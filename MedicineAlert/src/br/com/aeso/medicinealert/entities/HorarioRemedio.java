@@ -1,4 +1,4 @@
-package br.com.aeso.medicinealert.activity;
+package br.com.aeso.medicinealert.entities;
 
 import java.sql.Date;
 import java.sql.Time;

@@ -32,7 +32,7 @@ public class CadastraRemedioActivity extends Activity {
 		setContentView(R.layout.activity_cadastra_remedio);
 
 		edtNomeUsuario = (EditText) findViewById(R.id.txtUsuario);
-		edtNomeRemedio = (EditText) findViewById(R.id.txtNomeRemedio);
+		edtNomeRemedio = (EditText) findViewById(R.id.edtNomeRemedio);
 		edtDosagem = (EditText) findViewById(R.id.txtDosagemRemedio);
 		edtQtDias = (EditText) findViewById(R.id.txtQtDiasRemedio);
 		edtVezesDia = (EditText) findViewById(R.id.txtVezesDia);

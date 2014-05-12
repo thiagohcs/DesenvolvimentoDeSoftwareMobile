@@ -28,9 +28,9 @@ public final class R {
     }
     public static final class id {
         public static final int NomeRemedio=0x7f080001;
-        public static final int action_settings=0x7f080015;
-        public static final int btCadadastro=0x7f080014;
-        public static final int btConsulta=0x7f080013;
+        public static final int action_settings=0x7f08001b;
+        public static final int btCadadastro=0x7f080019;
+        public static final int btConsulta=0x7f08001a;
         public static final int btnCancelar=0x7f08000c;
         public static final int btnSalvar=0x7f08000d;
         public static final int dataCadastro=0x7f08000e;
@@ -40,12 +40,19 @@ public final class R {
         public static final int edtQdtDias=0x7f080007;
         public static final int edtUsuario=0x7f080002;
         public static final int edtVezesDia=0x7f080009;
-        public static final int listView1=0x7f080012;
+        public static final int item=0x7f08001c;
+        public static final int listView1=0x7f080011;
+        public static final int listView12=0x7f080012;
+        public static final int listView3=0x7f080013;
+        public static final int listView4=0x7f080014;
+        public static final int listView5=0x7f080015;
+        public static final int listView6=0x7f080016;
+        public static final int listView7=0x7f080017;
         public static final int ml=0x7f08000f;
-        public static final int scrollView1=0x7f080011;
+        public static final int scrollView1=0x7f080010;
+        public static final int svConsultaRemedio=0x7f080018;
         public static final int txtDataInicio=0x7f08000a;
         public static final int txtDosagemRemedio=0x7f080004;
-        public static final int txtNomeRemedio=0x7f080010;
         public static final int txtQtDiasRemedio=0x7f080005;
         public static final int txtUsuario=0x7f080000;
         public static final int txtVezesDia=0x7f080008;

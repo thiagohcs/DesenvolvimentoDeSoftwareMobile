@@ -8,38 +8,73 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ConsultaHorariosRemediosActivity" >
 
-    <EditText
-        android:id="@+id/txtNomeRemedio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="28dp"
-        android:ems="10" />
-
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtNomeRemedio"
-        android:layout_below="@+id/txtNomeRemedio"
-        android:layout_marginTop="17dp" >
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="95dp" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="510dp"
             android:orientation="vertical" >
 
             <ListView
                 android:id="@+id/listView1"
                 android:layout_width="match_parent"
-                android:layout_height="341dp" >
+                android:layout_height="wrap_content" >
             </ListView>
 
+            <ListView
+                android:id="@+id/listView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/listView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/listView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/listView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/listView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/listView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
         </LinearLayout>
     </ScrollView>
 
-    
+    <SearchView
+        android:id="@+id/svConsultaRemedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/scrollView1"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/scrollView1" >
+
+    </SearchView>
 
 </RelativeLayout>
