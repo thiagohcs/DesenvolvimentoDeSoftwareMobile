@@ -2,9 +2,9 @@ package br.com.aeso.medicinealert.activity;
 
 import java.util.Calendar;
 
-import br.com.aeso.medicinealert.R;
+import br.com.aeso.medicinealert.*;
 import br.com.aeso.medicinealert.entities.PrescricaoRemedio;
-import br.com.aeso.medicinialert.bancodedados.OpenHelper;
+import br.com.aeso.medicinealert.persistence.OpenHelper;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
