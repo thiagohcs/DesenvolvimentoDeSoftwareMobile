@@ -30,6 +30,10 @@
             android:name="br.com.aeso.medicinealert.activity.ConsultaHorariosRemediosActivity"
             android:label="@string/title_activity_consulta_horarios_remedios" >
         </activity>
+        <activity
+            android:name="br.com.aeso.medicinealert.activity.DtTimeActivity"
+            android:label="@string/title_activity_dt_time" >
+        </activity>
     </application>
 
 </manifest>

@@ -3,7 +3,8 @@ package br.com.aeso.medicinealert.activity;
 import java.util.Calendar;
 
 import br.com.aeso.medicinealert.R;
-
+import br.com.aeso.medicinealert.entities.PrescricaoRemedio;
+import br.com.aeso.medicinialert.bancodedados.OpenHelper;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -17,15 +18,13 @@ import android.widget.TextView;
 public class CadastraRemedioActivity extends Activity {
 
 	private EditText edtNomeUsuario, edtNomeRemedio, edtDosagem, edtQtDias,
-			edtVezesDia, dtInicio;
+			edtVezesDia;
 	private TextView tvData;
-	private DatePicker dtCadastro;
-	private Button btnSalvar, btnCancelar;
+	private Button btnSalvar, btnCancelar,btnDataHoraInicio;
 	private String nomeRemedio, nomeUsuario, qtDias, dosagem, vezesDia;
-	private int ano;
-	private int mes;
-	private int dia;
-
+	private OpenHelper helper;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,10 +35,18 @@ public class CadastraRemedioActivity extends Activity {
 		edtDosagem = (EditText) findViewById(R.id.txtDosagemRemedio);
 		edtQtDias = (EditText) findViewById(R.id.txtQtDiasRemedio);
 		edtVezesDia = (EditText) findViewById(R.id.txtVezesDia);
-		dtInicio = (EditText) findViewById(R.id.edtDataInicio);
-
+	
 		btnSalvar = (Button) findViewById(R.id.btnSalvar);
 		btnCancelar = (Button) findViewById(R.id.btnCancelar);
+		btnDataHoraInicio = (Button) findViewById(R.id.btDtTmInicio);
+		
+		btnDataHoraInicio.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+		           DataHora();
+			}
+		});
 
 		btnCancelar.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -52,6 +59,27 @@ public class CadastraRemedioActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				if (camposVazios() != false) {
+					PrescricaoRemedio prescricaoRemedio = new PrescricaoRemedio();
+					
+					
+					String usuario = edtNomeUsuario.getText().toString();
+					String remedio = edtNomeRemedio.getText().toString();
+					String txtQtdVezesDia = edtQtDias.getText().toString();
+					String dosagem = edtDosagem.getText().toString();
+					String txtQtdDias = edtQtDias.getText().toString();
+					
+					int qtdVezesDias = Integer.parseInt(txtQtdVezesDia);
+					int qtdDias = Integer.parseInt(txtQtdDias);
+					
+					prescricaoRemedio.setNomeRemedio(remedio);
+					prescricaoRemedio.setUsuario(usuario);
+					prescricaoRemedio.setQtdVezesDia(qtdVezesDias);
+					prescricaoRemedio.setDosagem(dosagem);
+					prescricaoRemedio.setQtdDias(qtdDias);
+					//prescricaoRemedio.setHorarioRemedio(horarioRemedio);
+					
+					helper.AdicionarPrescricaoRemedio(prescricaoRemedio);
+					
 					AlertDialog.Builder caixaAlerta = new AlertDialog.Builder(
 							CadastraRemedioActivity.this);
 					caixaAlerta.setMessage("Cadastro feito com sucesso!");
@@ -78,24 +106,10 @@ public class CadastraRemedioActivity extends Activity {
 	public void voltarMenuPrincipal() {
 		setContentView(R.layout.activity_home);
 	}
-
-	public void setCurrentDateOnView() {
-
-		dtInicio = (EditText) findViewById(R.id.txtDataInicio);
-		dtCadastro = (DatePicker) findViewById(R.id.dataCadastro);
-
-		final Calendar c = Calendar.getInstance();
-		ano = c.get(Calendar.YEAR);
-		mes = c.get(Calendar.MONTH);
-		dia = c.get(Calendar.DAY_OF_MONTH);
-
-		// Inserir a data correta no textView
-		dtInicio.setText(new StringBuilder()
-				// Mês começa com 0 , basta apenas adicionar mais 1.
-				.append(dia).append("-").append(mes + 1).append("-")
-				.append(ano).append(" "));
-		// Inserir a data correta dentro do datePicker
-		dtCadastro.init(ano, mes, dia, null);
+	
+	//Método para acessar o layout de data e hora.
+	public void DataHora(){
+		setContentView(R.layout.activity_dt_time);
 	}
 
 	// Método para verificar se existi algum campo vazio.

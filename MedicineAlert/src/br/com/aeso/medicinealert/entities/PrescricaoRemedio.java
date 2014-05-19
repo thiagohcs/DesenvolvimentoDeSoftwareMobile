@@ -6,13 +6,55 @@ import java.util.List;
 
 public class PrescricaoRemedio {
 	
+	int id;
 	String usuario;
 	Date dtInicio;
 	Integer qtdDias;
 	Integer qtdVezesDia;
-	Float dosagem;
+	String dosagem;
 	String nomeRemedio;
+	HorarioRemedio horarioRemedio;
 	List<Time> listaHorarioRemedio;
+
+	public HorarioRemedio getHorarioRemedio() {
+		return horarioRemedio;
+	}
+	
+		
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public void setHorarioRemedio(HorarioRemedio horarioRemedio) {
+		this.horarioRemedio = horarioRemedio;
+	}
+
+	public void setQtdDias(Integer qtdDias) {
+		this.qtdDias = qtdDias;
+	}
+
+	public void setQtdVezesDia(Integer qtdVezesDia) {
+		this.qtdVezesDia = qtdVezesDia;
+	}
+
+	public void setDosagem(String dosagem) {
+		this.dosagem = dosagem;
+	}
+
+	public String getDosagem() {
+		return dosagem;
+	}
+
+	
 	
 	public PrescricaoRemedio(){}
 
@@ -48,14 +90,8 @@ public class PrescricaoRemedio {
 		this.qtdVezesDia = qtdVezesDia;
 	}
 
-	public float getDosagem() {
-		return dosagem;
-	}
-
-	public void setDosagem(float dosagem) {
-		this.dosagem = dosagem;
-	}
-
+	
+	
 	public String getNomeRemedio() {
 		return nomeRemedio;
 	}

@@ -100,14 +100,6 @@
         android:ems="10"
         android:inputType="number" />
 
-    <TextView
-        android:id="@+id/txtDataInicio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/edtVezesDia"
-        android:layout_alignLeft="@+id/edtQdtDias"
-        android:text="@string/dtInicio" />
-
     <EditText
         android:id="@+id/edtDataInicio"
         android:layout_width="wrap_content"
@@ -135,14 +127,6 @@
         android:layout_alignRight="@+id/NomeRemedio"
         android:text="@string/salvar" />
 
-    <DatePicker
-        android:id="@+id/dataCadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnCancelar"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/edtVezesDia" />
-
     <TextView
         android:id="@+id/ml"
         android:layout_width="wrap_content"
@@ -150,5 +134,22 @@
         android:layout_alignBottom="@+id/edtDosagem"
         android:layout_toRightOf="@+id/edtDosagem"
         android:text="@string/ml" />
+
+    <Button
+        android:id="@+id/btDtTmInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSalvar"
+        android:layout_alignLeft="@+id/txtDataInicio"
+        android:layout_marginBottom="21dp"
+        android:text="clique aqui" />
+
+    <TextView
+        android:id="@+id/txtDataInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btDtTmInicio"
+        android:layout_alignLeft="@+id/edtVezesDia"
+        android:text="@string/dtTimeInicio" />
 
 </RelativeLayout>
