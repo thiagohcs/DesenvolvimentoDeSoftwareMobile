@@ -14,21 +14,38 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="@string/usuario" />
+        android:text="@string/usuario"
+        android:textSize="7pt" />
 
-    <TextView
-        android:id="@+id/NomeRemedio"
+    <EditText
+        android:id="@+id/edtDosagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtUsuario"
-        android:layout_below="@+id/edtUsuario"
-        android:text="@string/nomeRemedio" />
+        android:layout_alignBaseline="@+id/edtVezesDia"
+        android:layout_alignBottom="@+id/edtVezesDia"
+        android:layout_toLeftOf="@+id/edtQdtDias"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtVezesDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtQdtDias"
+        android:layout_alignBottom="@+id/edtQdtDias"
+        android:layout_alignLeft="@+id/txtVezesDia"
+        android:layout_alignRight="@+id/txtVezesDia"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
 
     <EditText
         android:id="@+id/edtNomeRemedio"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/NomeRemedio"
         android:layout_alignRight="@+id/edtUsuario"
         android:layout_below="@+id/NomeRemedio"
         android:ems="10"
@@ -36,120 +53,118 @@
 
     <EditText
         android:id="@+id/edtUsuario"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_below="@+id/txtUsuario"
         android:ems="10"
         android:inputType="text" />
-
-    <TextView
-        android:id="@+id/txtDosagemRemedio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtQtDiasRemedio"
-        android:layout_alignBottom="@+id/txtQtDiasRemedio"
-        android:layout_alignLeft="@+id/edtNomeRemedio"
-        android:text="@string/dosagemRemedio" />
-
-    <TextView
-        android:id="@+id/txtQtDiasRemedio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtNomeRemedio"
-        android:layout_toRightOf="@+id/NomeRemedio"
-        android:text="@string/qtdeDias" />
-
-    <EditText
-        android:id="@+id/edtDosagem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/txtDosagemRemedio"
-        android:layout_below="@+id/txtDosagemRemedio"
-        android:ems="10"
-        android:inputType="number" />
 
     <EditText
         android:id="@+id/edtQdtDias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtQtDiasRemedio"
-        android:layout_alignRight="@+id/txtQtDiasRemedio"
+        android:layout_alignRight="@+id/NomeRemedio"
         android:layout_below="@+id/txtQtDiasRemedio"
-        android:ems="10"
-        android:inputType="number" >
-
-        <requestFocus />
-    </EditText>
-
-    <TextView
-        android:id="@+id/txtVezesDia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtDosagem"
-        android:layout_below="@+id/edtDosagem"
-        android:text="@string/qtVezesDias" />
-
-    <EditText
-        android:id="@+id/edtVezesDia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/txtVezesDia"
-        android:layout_below="@+id/txtVezesDia"
         android:ems="10"
         android:inputType="number" />
 
-    <EditText
-        android:id="@+id/edtDataInicio"
+    <Button
+        android:id="@+id/btnSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/edtVezesDia"
-        android:layout_alignBottom="@+id/edtVezesDia"
-        android:layout_alignLeft="@+id/txtDataInicio"
-        android:layout_alignRight="@+id/txtQtDiasRemedio"
-        android:ems="10"
-        android:inputType="date" />
+        android:layout_alignBaseline="@+id/btnCancelar"
+        android:layout_alignBottom="@+id/btnCancelar"
+        android:layout_alignLeft="@+id/edtVezesDia"
+        android:layout_alignRight="@+id/edtVezesDia"
+        android:text="@string/salvar" />
 
     <Button
         android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/edtDataInicio"
+        android:layout_alignRight="@+id/edtQdtDias"
         android:text="@string/cancelar" />
 
-    <Button
-        android:id="@+id/btnSalvar"
+    <RadioButton
+        android:id="@+id/radioButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/NomeRemedio"
-        android:text="@string/salvar" />
+        android:layout_alignLeft="@+id/edtQdtDias"
+        android:layout_below="@+id/txtDosagemRemedio"
+        android:text="@string/TipoDosagemComp" />
 
     <TextView
-        android:id="@+id/ml"
+        android:id="@+id/txtVezesDia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/edtDosagem"
-        android:layout_toRightOf="@+id/edtDosagem"
-        android:text="@string/ml" />
+        android:layout_above="@+id/edtVezesDia"
+        android:layout_toRightOf="@+id/txtDataInicio"
+        android:text="@string/qtVezesDias"
+        android:textSize="7pt" />
 
-    <Button
-        android:id="@+id/btDtTmInicio"
+    <EditText
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnSalvar"
-        android:layout_alignLeft="@+id/txtDataInicio"
-        android:layout_marginBottom="21dp"
-        android:text="clique aqui" />
+        android:layout_alignLeft="@+id/radioButton1"
+        android:layout_alignRight="@+id/edtQdtDias"
+        android:layout_below="@+id/radioButton1"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/NomeRemedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtUsuario"
+        android:layout_below="@+id/edtUsuario"
+        android:text="@string/nomeRemedio"
+        android:textSize="7pt" />
+
+    <TextView
+        android:id="@+id/txtQtDiasRemedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtNomeRemedio"
+        android:layout_below="@+id/edtNomeRemedio"
+        android:text="@string/qtdeDias"
+        android:textSize="7pt" />
+
+    <TextView
+        android:id="@+id/txtDosagemRemedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtQdtDias"
+        android:layout_below="@+id/edtQdtDias"
+        android:text="@string/dosagemRemedio"
+        android:textSize="7pt" />
 
     <TextView
         android:id="@+id/txtDataInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btDtTmInicio"
-        android:layout_alignLeft="@+id/edtVezesDia"
-        android:text="@string/dtTimeInicio" />
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:text="@string/dtTimeInicio"
+        android:textSize="7pt" />
+
+    <Button
+        android:id="@+id/btDtTmInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtDataInicio"
+        android:layout_below="@+id/txtDataInicio"
+        android:layout_marginTop="15dp"
+        android:text="@string/insereHoraData" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText1"
+        android:layout_toRightOf="@+id/editText1"
+        android:text="@string/TipoDosagemLiq" />
 
 </RelativeLayout>

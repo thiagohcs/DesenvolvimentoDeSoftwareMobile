@@ -11,17 +11,20 @@
     <string name="usuario">Usuário:</string>
     <string name="nomeRemedio">Nome do remédio:</string>
     <string name="dosagemRemedio">Dosagem:</string>
-    <string name="qtdeDias">Quantidade de dias:</string>
-    <string name="qtVezesDias">Quantas vezes?</string>
+    <string name="qtdeDias">Duração:</string>
+    <string name="qtVezesDias">Quantas vezes:</string>
     <string name="dtHoraInicio">Data e hora de inicio:</string>
     <string name="ml">ml</string>
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
     <string name="title_activity_dt_time">DtTimeActivity</string>
     <string name="hello_world">Hello world!</string>
-	<string name="dtTimeInicio">Data e hora de inicio</string>
-	<string name="dtInicio">Data</string>
+	<string name="dtTimeInicio">Data e hora de inicio:</string>
+	<string name="DataHora">Data</string>
 	<string name="timeInicio">Hora</string>
+	<string name="insereHoraData">Clique aqui</string>
+	<string name="TipoDosagemComp">compimido</string>
+	<string name="TipoDosagemLiq">líquido</string>
 	
     
 </resources>

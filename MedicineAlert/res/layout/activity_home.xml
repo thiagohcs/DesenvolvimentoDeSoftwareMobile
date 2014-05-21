@@ -8,31 +8,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".HomeActivity" >
 
-    <TextView
-        android:id="@+id/NomeRemedio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:text="@string/bemVindo"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <Button
-        android:id="@+id/btCadadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/NomeRemedio"
-        android:layout_below="@+id/NomeRemedio"
-        android:layout_marginTop="47dp"
-        android:text="Cadastro" />
-
     <Button
         android:id="@+id/btConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btCadadastro"
-        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/btCadadastro"
+        android:layout_below="@+id/btCadadastro"
+        android:layout_marginTop="78dp"
         android:text="Consulta" />
+
+    <Button
+        android:id="@+id/btCadadastro"
+        style="@style/AppBaseTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="116dp"
+        android:text="Cadastrar" />
 
 </RelativeLayout>

@@ -1,19 +1,15 @@
 package br.com.aeso.medicinealert.activity;
 
-import java.util.Calendar;
-
-import br.com.aeso.medicinealert.*;
-import br.com.aeso.medicinealert.entities.PrescricaoRemedio;
-import br.com.aeso.medicinealert.persistence.OpenHelper;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import br.com.aeso.medicinealert.R;
+import br.com.aeso.medicinealert.entities.PrescricaoRemedio;
 
 public class CadastraRemedioActivity extends Activity {
 
@@ -22,7 +18,7 @@ public class CadastraRemedioActivity extends Activity {
 	private TextView tvData;
 	private Button btnSalvar, btnCancelar,btnDataHoraInicio;
 	private String nomeRemedio, nomeUsuario, qtDias, dosagem, vezesDia;
-	private OpenHelper helper;
+	//private OpenHelper helper;
 	
 	
 	@Override
@@ -78,7 +74,7 @@ public class CadastraRemedioActivity extends Activity {
 					prescricaoRemedio.setQtdDias(qtdDias);
 					//prescricaoRemedio.setHorarioRemedio(horarioRemedio);
 					
-					helper.AdicionarPrescricaoRemedio(prescricaoRemedio);
+				//	helper.AdicionarPrescricaoRemedio(prescricaoRemedio);
 					
 					AlertDialog.Builder caixaAlerta = new AlertDialog.Builder(
 							CadastraRemedioActivity.this);
@@ -109,7 +105,7 @@ public class CadastraRemedioActivity extends Activity {
 	
 	//Método para acessar o layout de data e hora.
 	public void DataHora(){
-		setContentView(R.layout.activity_dt_time);
+		//setContentView(R.layout.activity_dt_time);
 	}
 
 	// Método para verificar se existi algum campo vazio.
