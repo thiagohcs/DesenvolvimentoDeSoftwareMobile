@@ -4,7 +4,7 @@ public class FactoryRepositorio {
 	
 	private FactoryRepositorio(){}
 	
-	public static IRepositorio obterRepositorio(){
-		return Repositorio.getInstancia();
-	}
+//	public static IRepositorio obterRepositorio(){
+//		return Repositorio.getInstancia();
+//	}
 }

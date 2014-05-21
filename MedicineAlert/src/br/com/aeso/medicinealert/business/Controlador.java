@@ -2,25 +2,12 @@ package br.com.aeso.medicinealert.business;
 
 import br.com.aeso.medicinealert.entities.PrescricaoRemedio;
 import br.com.aeso.medicinealert.exception.ExcecaoRegraDeNegocio;
-import br.com.aeso.medicinealert.persistence.FactoryRepositorio;
-import br.com.aeso.medicinealert.persistence.IRepositorio;
 
 public class Controlador {
 
-	private static Controlador instanciaUnica = null;
-	private IRepositorio repositorio;
+	
 
-	public static Controlador getInstanciaUnica() {
-		if (instanciaUnica == null) {
-			instanciaUnica = new Controlador();
-		}
-		return instanciaUnica;
-	}
-
-	private Controlador() {
-		repositorio = FactoryRepositorio.obterRepositorio();
-	}
-
+	
 	private void validador(PrescricaoRemedio pRemedio)
 			throws ExcecaoRegraDeNegocio {
 		if (pRemedio.getUsuario().trim().equals("")
