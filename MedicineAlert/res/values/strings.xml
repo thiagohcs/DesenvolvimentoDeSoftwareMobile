@@ -12,7 +12,7 @@
     <string name="nomeRemedio">Nome do remédio:</string>
     <string name="dosagemRemedio">Dosagem:</string>
     <string name="qtdeDias">Duração:</string>
-    <string name="qtVezesDias">Quantas vezes:</string>
+    <string name="qtVezesDias">Quantas vezes ao dia:</string>
     <string name="dtHoraInicio">Data e hora de inicio:</string>
     <string name="ml">ml</string>
     <string name="salvar">Salvar</string>

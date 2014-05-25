@@ -5,7 +5,7 @@ import java.sql.Time;
 import java.util.List;
 
 public class PrescricaoRemedio {
-	
+
 	int id;
 	String usuario;
 	Date dtInicio;
@@ -16,23 +16,20 @@ public class PrescricaoRemedio {
 	HorarioRemedio horarioRemedio;
 	List<Time> listaHorarioRemedio;
 
+	public PrescricaoRemedio() {
+	}
+
 	public HorarioRemedio getHorarioRemedio() {
 		return horarioRemedio;
 	}
-	
-		
 
 	public int getId() {
 		return id;
 	}
 
-
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-
 
 	public void setHorarioRemedio(HorarioRemedio horarioRemedio) {
 		this.horarioRemedio = horarioRemedio;
@@ -53,10 +50,6 @@ public class PrescricaoRemedio {
 	public String getDosagem() {
 		return dosagem;
 	}
-
-	
-	
-	public PrescricaoRemedio(){}
 
 	public String getUsuario() {
 		return usuario;
@@ -90,8 +83,6 @@ public class PrescricaoRemedio {
 		this.qtdVezesDia = qtdVezesDia;
 	}
 
-	
-	
 	public String getNomeRemedio() {
 		return nomeRemedio;
 	}
@@ -107,12 +98,9 @@ public class PrescricaoRemedio {
 	public void setListaHorarioRemedio(List<Time> listaHorarioRemedio) {
 		this.listaHorarioRemedio = listaHorarioRemedio;
 	}
-	
-	public List<Time> sugerirHorario(){
+
+	public List<Time> sugerirHorario() {
 		return listaHorarioRemedio;
 	}
-	
-	
-	
-	
+
 }

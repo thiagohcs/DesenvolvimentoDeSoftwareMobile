@@ -78,11 +78,10 @@
         android:id="@+id/txtVezesDia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/edtNomeRemedio"
         android:layout_below="@+id/edtNomeRemedio"
-        android:layout_marginLeft="14dp"
-        android:layout_toRightOf="@+id/NomeRemedio"
         android:text="@string/qtVezesDias"
-        android:textSize="7pt" />
+        android:textSize="6.5pt" />
 
     <TextView
         android:id="@+id/txtDosagemRemedio"
