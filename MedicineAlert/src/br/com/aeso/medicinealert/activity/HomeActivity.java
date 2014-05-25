@@ -11,34 +11,39 @@ import br.com.aeso.medicinealert.R;
 
 public class HomeActivity extends Activity {
 
-	Button btCadastro,btConsulta;
+	Button btCadastrar;
+	Button btConsulta;
 	
-	private OnClickListener onClickCadastar = new OnClickListener() {
-		@Override
-		public void onClick(View v) {
-			Intent intent = new Intent(HomeActivity.this,CadastraRemedioActivity.class);
-			startActivity(intent);
-		}
-	};
-	
-	private OnClickListener onClickConsultar = new OnClickListener() {
-		@Override
-		public void onClick(View v) {
-			Intent intent = new Intent(HomeActivity.this,ConsultaHorariosRemediosActivity.class);
-			startActivity(intent);
-		}
-	};
+//	private OnClickListener onClickConsultar = new OnClickListener() {
+//		@Override
+//		public void onClick(View v) {
+//			Intent intent = new Intent(HomeActivity.this,ConsultaHorariosRemediosActivity.class);
+//			startActivity(intent);
+//		}
+//	};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 	
-		btCadastro = (Button) findViewById(R.id.btCadadastro);
+		btCadastrar = (Button) findViewById(R.id.btCadadastra);
 		btConsulta = (Button) findViewById(R.id.btConsulta);
 		
-		btCadastro.setOnClickListener(onClickCadastar);
-		btConsulta.setOnClickListener(onClickConsultar);
+		btCadastrar.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(HomeActivity.this, CadastraRemedioActivity.class);
+				startActivity(i);
+			}
+		});
+		btConsulta.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(HomeActivity.this,ConsultaHorariosRemediosActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 	@Override

@@ -22,86 +22,100 @@ public final class R {
     }
     public static final class drawable {
         public static final int button_1=0x7f020000;
-        public static final int cadastrar=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
+        public static final int button_custom=0x7f020001;
+        public static final int cadastrar=0x7f020002;
+        public static final int calendario=0x7f020003;
+        public static final int calendario2=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int remedio=0x7f020006;
+        public static final int timer=0x7f020007;
     }
     public static final class id {
-        public static final int NomeRemedio=0x7f080006;
+        public static final int NomeRemedio=0x7f080002;
         public static final int action_settings=0x7f08001c;
-        public static final int btCadadastro=0x7f08001b;
-        public static final int btConsulta=0x7f08001a;
-        public static final int btDtTmInicio=0x7f08000f;
-        public static final int btnCancelar=0x7f08000a;
-        public static final int btnSalvar=0x7f080009;
-        public static final int editText1=0x7f08000e;
-        public static final int edtDosagem=0x7f080001;
-        public static final int edtNomeRemedio=0x7f080005;
-        public static final int edtQdtDias=0x7f080003;
-        public static final int edtUsuario=0x7f080007;
-        public static final int edtVezesDia=0x7f080002;
+        public static final int btCadadastra=0x7f080015;
+        public static final int btConsulta=0x7f080018;
+        public static final int btnSalvar=0x7f080006;
+        public static final int btnSalvarData=0x7f080013;
+        public static final int btnSalvarHora=0x7f08001b;
+        public static final int datePicker1=0x7f080014;
+        public static final int edtDosagem=0x7f08000c;
+        public static final int edtNomeRemedio=0x7f080001;
+        public static final int edtNomeUsuario=0x7f080003;
+        public static final int edtQdtDias=0x7f080004;
+        public static final int edtVezesDia=0x7f08000f;
+        public static final int imageView1=0x7f080017;
+        public static final int imgBtnData=0x7f080007;
+        public static final int imgBtnHora=0x7f080010;
         public static final int item=0x7f08001d;
-        public static final int listView1=0x7f080012;
-        public static final int listView12=0x7f080013;
-        public static final int listView3=0x7f080014;
-        public static final int listView4=0x7f080015;
-        public static final int listView5=0x7f080016;
-        public static final int listView6=0x7f080017;
-        public static final int listView7=0x7f080018;
-        public static final int radioButton1=0x7f08000b;
-        public static final int radioButton2=0x7f080010;
-        public static final int scrollView1=0x7f080011;
-        public static final int svConsultaRemedio=0x7f080019;
-        public static final int txtDataInicio=0x7f08000d;
-        public static final int txtDosagemRemedio=0x7f08000c;
-        public static final int txtQtDiasRemedio=0x7f080008;
+        public static final int radioComprimido=0x7f08000d;
+        public static final int radioLiquido=0x7f08000e;
+        public static final int rgOpcoesDosagem=0x7f08000b;
+        public static final int textView1=0x7f080016;
+        public static final int timePicker1=0x7f08001a;
+        public static final int txtData=0x7f080012;
+        public static final int txtDataInicio=0x7f080008;
+        public static final int txtDosagemRemedio=0x7f08000a;
+        public static final int txtDuracao=0x7f080005;
+        public static final int txtHora=0x7f080019;
+        public static final int txtHoraInicio=0x7f080011;
         public static final int txtUsuario=0x7f080000;
-        public static final int txtVezesDia=0x7f080004;
+        public static final int txtVezesDia=0x7f080009;
     }
     public static final class layout {
         public static final int activity_cadastra_remedio=0x7f030000;
         public static final int activity_consulta_horarios_remedios=0x7f030001;
-        public static final int activity_home=0x7f030002;
+        public static final int activity_data=0x7f030002;
+        public static final int activity_home=0x7f030003;
+        public static final int activity_hora=0x7f030004;
     }
     public static final class menu {
         public static final int cadastra_remedio=0x7f070000;
         public static final int consulta_horarios_remedios=0x7f070001;
-        public static final int home=0x7f070002;
+        public static final int data_hora=0x7f070002;
+        public static final int home=0x7f070003;
+        public static final int hora=0x7f070004;
     }
     public static final class string {
-        public static final int DataHora=0x7f050013;
-        public static final int TipoDosagemComp=0x7f050016;
-        public static final int TipoDosagemLiq=0x7f050017;
+        public static final int Data=0x7f050012;
+        public static final int Hora=0x7f050013;
+        public static final int TipoDosagemComp=0x7f050015;
+        public static final int TipoDosagemLiq=0x7f050016;
         public static final int action_settings=0x7f050001;
         public static final int addRemedio=0x7f050003;
         public static final int app_name=0x7f050000;
         public static final int bemVindo=0x7f050002;
+        public static final int cadastrarRemedio=0x7f050017;
         public static final int cancelar=0x7f05000f;
+        public static final int consultarRemedio=0x7f050018;
         public static final int dosagemRemedio=0x7f050009;
         public static final int dtHoraInicio=0x7f05000c;
-        public static final int dtTimeInicio=0x7f050012;
         public static final int hello_world=0x7f050011;
-        public static final int insereHoraData=0x7f050015;
+        public static final int insereHoraData=0x7f050014;
         public static final int ml=0x7f05000d;
         public static final int nomeRemedio=0x7f050008;
         public static final int qtVezesDias=0x7f05000b;
         public static final int qtdeDias=0x7f05000a;
         public static final int salvar=0x7f05000e;
         public static final int searchRemedio=0x7f050004;
-        public static final int timeInicio=0x7f050014;
         public static final int title_activity_cadastra_remedio=0x7f050005;
         public static final int title_activity_consulta_horarios_remedios=0x7f050006;
+        public static final int title_activity_data=0x7f050019;
         public static final int title_activity_dt_time=0x7f050010;
+        public static final int title_activity_hora=0x7f05001a;
         public static final int usuario=0x7f050007;
     }
     public static final class style {
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -120,5 +134,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int buttonStyle=0x7f060002;
     }
 }

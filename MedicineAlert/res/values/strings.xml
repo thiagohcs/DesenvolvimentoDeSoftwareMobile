@@ -6,8 +6,8 @@
     <string name="bemVindo">Bem Vindo!</string>
     <string name="addRemedio">Cadastrar Remédio</string>
     <string name="searchRemedio">Consultar Remédio</string>
-    <string name="title_activity_cadastra_remedio">CadastraRemedioActivity</string>
-    <string name="title_activity_consulta_horarios_remedios">ConsultaHorariosRemediosActivity</string>
+    <string name="title_activity_cadastra_remedio">Cadastra Remédio</string>
+    <string name="title_activity_consulta_horarios_remedios">Consulta Remédios</string>
     <string name="usuario">Usuário:</string>
     <string name="nomeRemedio">Nome do remédio:</string>
     <string name="dosagemRemedio">Dosagem:</string>
@@ -19,12 +19,14 @@
     <string name="cancelar">Cancelar</string>
     <string name="title_activity_dt_time">DtTimeActivity</string>
     <string name="hello_world">Hello world!</string>
-	<string name="dtTimeInicio">Data e hora de inicio:</string>
-	<string name="DataHora">Data</string>
-	<string name="timeInicio">Hora</string>
-	<string name="insereHoraData">Clique aqui</string>
-	<string name="TipoDosagemComp">compimido</string>
-	<string name="TipoDosagemLiq">líquido</string>
-	
-    
+    <string name="Data">Data: </string>
+    <string name="Hora">Hora: </string>
+    <string name="insereHoraData">Clique aqui</string>
+    <string name="TipoDosagemComp">compimido</string>
+    <string name="TipoDosagemLiq">líquido</string>
+    <string name="cadastrarRemedio">Cadastrar</string>
+    <string name="consultarRemedio">Consultar</string>
+    <string name="title_activity_data">Data do Remédio</string>
+    <string name="title_activity_hora">Hora do Remédio</string>
+
 </resources>

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="start"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -18,41 +19,17 @@
         android:textSize="7pt" />
 
     <EditText
-        android:id="@+id/edtDosagem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/edtVezesDia"
-        android:layout_alignBottom="@+id/edtVezesDia"
-        android:layout_toLeftOf="@+id/edtQdtDias"
-        android:ems="10"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/edtVezesDia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/edtQdtDias"
-        android:layout_alignBottom="@+id/edtQdtDias"
-        android:layout_alignLeft="@+id/txtVezesDia"
-        android:layout_alignRight="@+id/txtVezesDia"
-        android:ems="10"
-        android:inputType="number" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
         android:id="@+id/edtNomeRemedio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/NomeRemedio"
-        android:layout_alignRight="@+id/edtUsuario"
+        android:layout_alignRight="@+id/edtNomeUsuario"
         android:layout_below="@+id/NomeRemedio"
         android:ems="10"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/edtUsuario"
+        android:id="@+id/edtNomeUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -64,53 +41,8 @@
         android:id="@+id/edtQdtDias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/NomeRemedio"
-        android:layout_below="@+id/txtQtDiasRemedio"
-        android:ems="10"
-        android:inputType="number" />
-
-    <Button
-        android:id="@+id/btnSalvar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnCancelar"
-        android:layout_alignBottom="@+id/btnCancelar"
-        android:layout_alignLeft="@+id/edtVezesDia"
-        android:layout_alignRight="@+id/edtVezesDia"
-        android:text="@string/salvar" />
-
-    <Button
-        android:id="@+id/btnCancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/edtQdtDias"
-        android:text="@string/cancelar" />
-
-    <RadioButton
-        android:id="@+id/radioButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtQdtDias"
-        android:layout_below="@+id/txtDosagemRemedio"
-        android:text="@string/TipoDosagemComp" />
-
-    <TextView
-        android:id="@+id/txtVezesDia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/edtVezesDia"
-        android:layout_toRightOf="@+id/txtDataInicio"
-        android:text="@string/qtVezesDias"
-        android:textSize="7pt" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioButton1"
-        android:layout_alignRight="@+id/edtQdtDias"
-        android:layout_below="@+id/radioButton1"
+        android:layout_below="@+id/txtDuracao"
+        android:layout_toLeftOf="@+id/btnSalvar"
         android:ems="10"
         android:inputType="number" />
 
@@ -118,18 +50,37 @@
         android:id="@+id/NomeRemedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtUsuario"
-        android:layout_below="@+id/edtUsuario"
+        android:layout_alignLeft="@+id/edtNomeUsuario"
+        android:layout_below="@+id/edtNomeUsuario"
         android:text="@string/nomeRemedio"
         android:textSize="7pt" />
 
     <TextView
-        android:id="@+id/txtQtDiasRemedio"
+        android:id="@+id/txtDuracao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/edtNomeRemedio"
         android:layout_below="@+id/edtNomeRemedio"
         android:text="@string/qtdeDias"
+        android:textSize="7pt" />
+
+    <ImageButton
+        android:id="@+id/imgBtnData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtDataInicio"
+        android:layout_alignRight="@+id/txtDuracao"
+        android:layout_below="@+id/txtDataInicio"
+        android:src="@drawable/calendario2" />
+
+    <TextView
+        android:id="@+id/txtVezesDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtNomeRemedio"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/NomeRemedio"
+        android:text="@string/qtVezesDias"
         android:textSize="7pt" />
 
     <TextView
@@ -138,33 +89,90 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/edtQdtDias"
         android:layout_below="@+id/edtQdtDias"
+        android:layout_marginTop="14dp"
         android:text="@string/dosagemRemedio"
         android:textSize="7pt" />
+
+    <RadioGroup
+        android:id="@+id/rgOpcoesDosagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edtDosagem"
+        android:layout_alignLeft="@+id/txtDosagemRemedio" >
+
+        <RadioButton
+            android:id="@+id/radioComprimido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/TipoDosagemComp" />
+
+        <RadioButton
+            android:id="@+id/radioLiquido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TipoDosagemLiq" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtDosagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtVezesDia"
+        android:layout_alignRight="@+id/txtVezesDia"
+        android:layout_below="@+id/txtDosagemRemedio"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtVezesDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtDosagemRemedio"
+        android:layout_alignLeft="@+id/txtVezesDia"
+        android:ems="10"
+        android:inputType="number" />
+
+    <ImageButton
+        android:id="@+id/imgBtnHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgBtnData"
+        android:layout_toRightOf="@+id/NomeRemedio"
+        android:src="@drawable/timer" />
+
+    <TextView
+        android:id="@+id/txtHoraInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtDataInicio"
+        android:layout_alignBottom="@+id/txtDataInicio"
+        android:layout_alignLeft="@+id/imgBtnHora"
+        android:text="@string/Hora"
+        android:textSize="7pt" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        style="@style/buttonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/edtVezesDia"
+        android:layout_below="@+id/imgBtnData"
+        android:layout_marginTop="16dp"
+        android:text="@string/salvar" />
 
     <TextView
         android:id="@+id/txtDataInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:text="@string/dtTimeInicio"
+        android:layout_alignLeft="@+id/rgOpcoesDosagem"
+        android:layout_below="@+id/rgOpcoesDosagem"
+        android:layout_marginTop="14dp"
+        android:text="@string/Data"
         android:textSize="7pt" />
-
-    <Button
-        android:id="@+id/btDtTmInicio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtDataInicio"
-        android:layout_below="@+id/txtDataInicio"
-        android:layout_marginTop="15dp"
-        android:text="@string/insereHoraData" />
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText1"
-        android:layout_toRightOf="@+id/editText1"
-        android:text="@string/TipoDosagemLiq" />
-
+    
 </RelativeLayout>

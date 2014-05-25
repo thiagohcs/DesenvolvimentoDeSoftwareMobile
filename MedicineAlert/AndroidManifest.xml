@@ -34,6 +34,16 @@
             android:name="br.com.aeso.medicinealert.activity.DtTimeActivity"
             android:label="@string/title_activity_dt_time" >
         </activity>
+        <activity
+            android:name="br.com.aeso.medicinealert.activity.DataActivity"
+            android:label="@string/title_activity_data"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="br.com.aeso.medicinealert.activity.HoraActivity"
+            android:label="@string/title_activity_hora" 
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
     </application>
 
 </manifest>

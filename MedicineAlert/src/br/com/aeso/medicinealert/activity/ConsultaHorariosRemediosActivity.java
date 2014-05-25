@@ -4,44 +4,35 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.view.View;
-import android.view.View.OnFocusChangeListener;
+import android.view.MenuItem;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 import br.com.aeso.medicinealert.R;
 
 public class ConsultaHorariosRemediosActivity extends Activity {
 
-	SearchView svConsultaRemedio;
-	
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_consulta_horarios_remedios);
-		
-		svConsultaRemedio = (SearchView) findViewById(R.id.svConsultaRemedio);
-		
-		svConsultaRemedio.setOnQueryTextFocusChangeListener( new OnFocusChangeListener() {
-			
-			@Override
-			public void onFocusChange(View v, boolean hasFocus) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
+
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.consulta_horarios_remedios, menu);
-	
+		//getMenuInflater().inflate(R.menu.consulta_horarios_remedios, menu);
+		SearchView sv = new SearchView(this);
+		sv.setOnQueryTextListener(new SearchFiltro());
+		
+		MenuItem m1 = menu.add(0,0,0, "Item1");
+		m1.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+		m1.setActionView(sv);
+		
 		return true;
 	}
 
-	private class SearchFiltro implements OnQueryTextListener{
+	private class SearchFiltro implements OnQueryTextListener {
 
 		@Override
 		public boolean onQueryTextChange(String newText) {
@@ -54,6 +45,6 @@ public class ConsultaHorariosRemediosActivity extends Activity {
 			Log.i("Script", "onQueryTextSubmit ->" + query);
 			return false;
 		}
-		
+
 	}
 }

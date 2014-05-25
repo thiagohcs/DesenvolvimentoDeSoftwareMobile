@@ -9,22 +9,44 @@
     tools:context=".HomeActivity" >
 
     <Button
-        android:id="@+id/btConsulta"
+        android:id="@+id/btCadadastra"
+        style="@style/buttonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/btCadadastro"
-        android:layout_below="@+id/btCadadastro"
-        android:layout_marginTop="78dp"
-        android:text="Consulta" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="68dp"
+        android:layout_marginRight="38dp"
+        android:text="@string/cadastrarRemedio" />
 
-    <Button
-        android:id="@+id/btCadadastro"
-        style="@style/AppBaseTheme"
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="116dp"
-        android:text="Cadastrar" />
+        android:layout_marginTop="20dp"
+        android:text="@string/bemVindo"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/remedio" />
+
+    <Button
+        android:id="@+id/btConsulta"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btCadadastra"
+        android:layout_alignBottom="@+id/btCadadastra"
+        android:layout_marginRight="42dp"
+        android:layout_toLeftOf="@+id/btCadadastra"
+        android:text="@string/consultarRemedio" />
 
 </RelativeLayout>
