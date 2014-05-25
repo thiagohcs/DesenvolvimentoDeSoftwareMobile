@@ -35,7 +35,8 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/txtUsuario"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="text" 
+        />
 
     <EditText
         android:id="@+id/edtQdtDias"
@@ -124,8 +125,6 @@
         android:layout_marginTop="27dp"
         android:ems="10"
         android:inputType="number" >
-
-        <requestFocus />
     </EditText>
 
     <EditText
@@ -174,5 +173,14 @@
         android:layout_marginTop="14dp"
         android:text="@string/Data"
         android:textSize="7pt" />
+
+    <EditText
+        android:id="@+id/edtQtdDias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtDuracao"
+        android:layout_alignRight="@+id/rgOpcoesDosagem"
+        android:layout_below="@+id/txtDuracao"
+        android:ems="10" />
     
 </RelativeLayout>
