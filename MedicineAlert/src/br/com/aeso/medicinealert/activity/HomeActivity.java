@@ -14,14 +14,6 @@ public class HomeActivity extends Activity {
 	Button btCadastrar;
 	Button btConsulta;
 	
-//	private OnClickListener onClickConsultar = new OnClickListener() {
-//		@Override
-//		public void onClick(View v) {
-//			Intent intent = new Intent(HomeActivity.this,ConsultaHorariosRemediosActivity.class);
-//			startActivity(intent);
-//		}
-//	};
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

@@ -8,35 +8,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".HomeActivity" >
 
-    <Button
-        android:id="@+id/btCadadastra"
-        style="@style/buttonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="68dp"
-        android:layout_marginRight="38dp"
-        android:text="@string/cadastrarRemedio" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="58dp"
         android:text="@string/bemVindo"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageView
         android:id="@+id/imageView1"
+        android:contentDescription="@string/remedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:src="@drawable/remedio" />
+
+    <Button
+        android:id="@+id/btCadadastra"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginRight="52dp"
+        android:layout_marginTop="46dp"
+        android:text="@string/cadastrarRemedio" />
 
     <Button
         android:id="@+id/btConsulta"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/btCadadastra"
         android:layout_alignBottom="@+id/btCadadastra"
-        android:layout_marginRight="42dp"
+        android:layout_marginRight="41dp"
         android:layout_toLeftOf="@+id/btCadadastra"
         android:text="@string/consultarRemedio" />
 

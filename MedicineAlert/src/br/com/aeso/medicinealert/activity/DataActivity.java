@@ -3,12 +3,17 @@ package br.com.aeso.medicinealert.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.DatePicker;
 import br.com.aeso.medicinealert.R;
 
 public class DataActivity extends Activity {
 	
-	DatePicker data;
+	DatePicker dataPiker;
+	Button btnSalvarData;
+	String data;
 	
 	
 	@Override
@@ -16,9 +21,17 @@ public class DataActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_data);
 		
-		data = (DatePicker) findViewById(R.id.datePicker1);
+		dataPiker = (DatePicker) findViewById(R.id.datePicker1);
+		btnSalvarData = (Button) findViewById(R.id.btnSalvarData);
 		
-		//data.set  
+		btnSalvarData.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				data = dataPiker.getDayOfMonth()+"/"+dataPiker.getMonth()+"/"+dataPiker.getYear();
+				
+			}
+		});  
 	}
 
 	@Override

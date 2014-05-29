@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 import br.com.aeso.medicinealert.R;
 import br.com.aeso.medicinealert.entities.PrescricaoRemedio;
@@ -17,9 +18,9 @@ public class CadastraRemedioActivity extends Activity {
 
 	private EditText edtNomeUsuario, edtNomeRemedio, edtQtDias, edtVezesDia,edtDosagem;
 	private Button btnSalvar;
-	private ImageButton imgBtnData, imgBtnHora;
+	private RadioGroup radioOpcoesDosagem;
+	private ImageButton btnData, btnHora;
 	private String nomeRemedio, nomeUsuario, dosagem; 
-	//Faltando a variavel que verifica qual o tipo da dosagem
 	Integer qtDias, vezesDia;
 	PrescricaoRemedio prescricaoRemedio;
 	// private OpenHelper helper;
@@ -35,11 +36,11 @@ public class CadastraRemedioActivity extends Activity {
 		edtQtDias = (EditText) findViewById(R.id.edtQtdDias);
 		edtVezesDia = (EditText) findViewById(R.id.edtVezesDia);
 		edtDosagem = (EditText) findViewById(R.id.edtDosagem);
-		imgBtnData = (ImageButton) findViewById(R.id.imgBtnData);
-		imgBtnHora = (ImageButton) findViewById(R.id.imgBtnHora);
+		btnData = (ImageButton) findViewById(R.id.btnData);
+		btnHora = (ImageButton) findViewById(R.id.btnHora);
 		btnSalvar = (Button) findViewById(R.id.btnSalvar);
 
-		imgBtnData.setOnClickListener(new OnClickListener() {
+		btnData.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(CadastraRemedioActivity.this,
@@ -48,7 +49,7 @@ public class CadastraRemedioActivity extends Activity {
 			}
 		});
 
-		imgBtnHora.setOnClickListener(new OnClickListener() {
+		btnHora.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(CadastraRemedioActivity.this,
@@ -90,10 +91,6 @@ public class CadastraRemedioActivity extends Activity {
 		return true;
 	}
 
-	// Método para ser utilizado no botão "Cancelar"
-	// public void voltarMenuPrincipal() {
-	//		setContentView(R.layout.activity_home);
-	// }
 	
 	// Método genérico para verificar se existe algum editText vazio e mostrar um Toast com o erro
 	public boolean ValidaEditText(String nomeCampo, EditText campo) {
