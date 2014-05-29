@@ -31,6 +31,7 @@ public final class R {
         public static final int timer=0x7f020007;
     }
     public static final class id {
+        public static final int Lista=0x7f080013;
         public static final int NomeRemedio=0x7f080002;
         public static final int action_settings=0x7f08001e;
         public static final int btCadadastra=0x7f080017;
@@ -52,7 +53,6 @@ public final class R {
         public static final int radioComprimido=0x7f08000d;
         public static final int radioLiquido=0x7f08000e;
         public static final int rgOpcoesDosagem=0x7f08000b;
-        public static final int scrollView1=0x7f080013;
         public static final int textView1=0x7f080018;
         public static final int timePicker1=0x7f08001c;
         public static final int txtData=0x7f080014;

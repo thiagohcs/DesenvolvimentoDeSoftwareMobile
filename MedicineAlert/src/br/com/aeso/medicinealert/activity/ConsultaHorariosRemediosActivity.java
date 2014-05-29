@@ -5,17 +5,28 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 import br.com.aeso.medicinealert.R;
 
 public class ConsultaHorariosRemediosActivity extends Activity {
-
+	
+	
+	String[] listRemedio = new String[]{"remedio1","remedio2","remedio4","remedio5","remedio6","remedio7"};
+	ListView lv;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_consulta_horarios_remedios);
-
+		
+		lv = (ListView) findViewById(R.id.Lista);
+		
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listRemedio);
+		
+		lv.setAdapter(adapter);
 	}
 
 	@Override
