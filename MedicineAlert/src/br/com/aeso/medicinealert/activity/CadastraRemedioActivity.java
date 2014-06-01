@@ -16,33 +16,35 @@ import br.com.aeso.medicinealert.entities.PrescricaoRemedio;
 
 public class CadastraRemedioActivity extends Activity {
 
-	private EditText edtNomeUsuario, edtNomeRemedio, edtQtDias, edtVezesDia,edtDosagem;
+	private EditText edtNomeUsuario, edtNomeRemedio, edtQtDias, edtVezesDia,
+			edtDosagem;
 	private Button btnSalvar;
-	private RadioGroup radioOpcoesDosagem;
 	private ImageButton btnData, btnHora;
-	private String nomeRemedio, nomeUsuario, dosagem, data, hora; 
-	Integer qtDias, vezesDia;
+	private String data, hora, tipoDosagem = null;
 	PrescricaoRemedio prescricaoRemedio;
 	// private OpenHelper helper;
 
-	
 	private OnClickListener onClickSalvar = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
 			prescricaoRemedio = new PrescricaoRemedio();
-//			data = this.getIntent().getStringExtra("Data", 0);
-//			hora = this.getIntent().getStringExtra("Hora",0);
-			
-			
-			if(ValidaEditText("nomeUsuario", edtNomeUsuario) != false){
-				prescricaoRemedio.setUsuario(edtNomeUsuario.getText().toString());
-			}else if(ValidaEditText("nomeRemedio", edtNomeRemedio) != false){
-				prescricaoRemedio.setNomeRemedio(edtNomeRemedio.getText().toString());
-			}else if (ValidaEditText("qtDias", edtQtDias) != false){
-				prescricaoRemedio.setQtdDias(Integer.parseInt(edtQtDias.getText().toString()));
-			}else if (ValidaEditText("vezesDia", edtVezesDia) != false){
-				prescricaoRemedio.setQtdVezesDia(Integer.parseInt(edtVezesDia.getText().toString()));
-			}else if (ValidaEditText("dosagem", edtDosagem) != false){
+
+			if (ValidaEditText("nomeUsuario", edtNomeUsuario) != false) {
+				prescricaoRemedio.setUsuario(edtNomeUsuario.getText()
+						.toString());
+			} else if (ValidaEditText("nomeRemedio", edtNomeRemedio) != false) {
+				prescricaoRemedio.setNomeRemedio(edtNomeRemedio.getText()
+						.toString());
+			} else if (ValidaEditText("qtDias", edtQtDias) != false) {
+				prescricaoRemedio.setQtdDias(Integer.parseInt(edtQtDias
+						.getText().toString()));
+			} else if (ValidaEditText("vezesDia", edtVezesDia) != false) {
+				prescricaoRemedio.setQtdVezesDia(Integer.parseInt(edtVezesDia
+						.getText().toString()));
+			}else if (ValidaEditText("tipoDosagem", edtDosagem) != false) {
+				// verificar o tipo da dosagem
+				prescricaoRemedio.setDosagem(edtVezesDia.getText().toString()); 
+			}else if (ValidaEditText("dosagem", edtDosagem) != false) {
 				// verificar o tipo da dosagem
 				prescricaoRemedio.setDosagem(edtVezesDia.getText().toString());
 			}
@@ -51,16 +53,33 @@ public class CadastraRemedioActivity extends Activity {
 			Toast t = new Toast(getApplicationContext());
 			t.setText("Remédio cadastrado");
 			t.show();
-			
+
 		}
 	};
-	
+
+	private OnClickListener onClickHora = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			Intent i = new Intent(CadastraRemedioActivity.this,
+					HoraActivity.class);
+			startActivity(i);
+		}
+	};
+
+	private OnClickListener onClickData = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			Intent i = new Intent(CadastraRemedioActivity.this,
+					DataActivity.class);
+			startActivity(i);
+		}
+	};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_cadastra_remedio);
-		
+
 		edtNomeUsuario = (EditText) findViewById(R.id.edtNomeUsuario);
 		edtNomeRemedio = (EditText) findViewById(R.id.edtNomeRemedio);
 		edtQtDias = (EditText) findViewById(R.id.edtQtdDias);
@@ -69,28 +88,23 @@ public class CadastraRemedioActivity extends Activity {
 		btnData = (ImageButton) findViewById(R.id.btnData);
 		btnHora = (ImageButton) findViewById(R.id.btnHora);
 		btnSalvar = (Button) findViewById(R.id.btnSalvar);
+		int idRadioSelecionado = ((RadioGroup) findViewById(R.id.radioOpcoesDosagem))
+				.getCheckedRadioButtonId();
+		if (idRadioSelecionado == R.id.radioComprimido) {
+			tipoDosagem = "comprimido";
+		} else {
+			tipoDosagem = "líquido";
+		}
 
-		btnData.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(CadastraRemedioActivity.this,
-						DataActivity.class);
-				startActivity(i);
-			}
-		});
+		hora = this.getIntent().getStringExtra(hora);
+		data = this.getIntent().getStringExtra(data);
 
-		btnHora.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(CadastraRemedioActivity.this,
-						HoraActivity.class);
-				startActivity(i);
-			}
-		});
-		
+		btnData.setOnClickListener(onClickData);
+		btnHora.setOnClickListener(onClickHora);
 		btnSalvar.setOnClickListener(onClickSalvar);
+
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -98,30 +112,40 @@ public class CadastraRemedioActivity extends Activity {
 		return true;
 	}
 
-	
-	// Método genérico para verificar se existe algum editText vazio e mostrar um Toast com o erro
+	// Método genérico para verificar se existe algum editText vazio e mostrar
+	// um Toast com o erro
 	public boolean ValidaEditText(String nomeCampo, EditText campo) {
-		if (nomeCampo.equals("nomeUsuario") && campo.toString().trim().equals("") || campo.toString().equals(null)){
+		if (nomeCampo.equals("nomeUsuario")
+				&& campo.toString().trim().equals("")
+				|| campo.toString().equals(null)) {
 			Toast t = new Toast(getApplicationContext());
 			t.setText("O nome do usuário não foi informado");
 			t.show();
 			return false;
-		}else if (nomeCampo.equals("nomeRemedio") && campo.toString().trim().equals("") || campo.toString().equals(null)){
+		} else if (nomeCampo.equals("nomeRemedio")
+				&& campo.toString().trim().equals("")
+				|| campo.toString().equals(null)) {
 			Toast t = new Toast(getApplicationContext());
 			t.setText("O nome do remédio não foi informado");
 			t.show();
 			return false;
-		}else if (nomeCampo.equals("qtDias") && campo.toString().trim().equals("") || campo.toString().equals(null)){
+		} else if (nomeCampo.equals("qtDias")
+				&& campo.toString().trim().equals("")
+				|| campo.toString().equals(null)) {
 			Toast t = new Toast(getApplicationContext());
 			t.setText("A quantidade de dias não foi informado");
 			t.show();
 			return false;
-		}else if (nomeCampo.equals("vezesDia") && campo.toString().trim().equals("") || campo.toString().equals(null)){
+		} else if (nomeCampo.equals("vezesDia")
+				&& campo.toString().trim().equals("")
+				|| campo.toString().equals(null)) {
 			Toast t = new Toast(getApplicationContext());
 			t.setText("A quantidade de vezes ao dia não foi informado");
 			t.show();
 			return false;
-		}else if (nomeCampo.equals("dosagem") && campo.toString().trim().equals("") || campo.toString().equals(null)){
+		} else if (nomeCampo.equals("dosagem")
+				&& campo.toString().trim().equals("")
+				|| campo.toString().equals(null)) {
 			Toast t = new Toast(getApplicationContext());
 			t.setText("A dosagem não foi informado");
 			t.show();

@@ -1,26 +1,17 @@
 package br.com.aeso.medicinealert.entities;
 
-import java.sql.Date;
-import java.sql.Time;
-import java.util.List;
 
 public class PrescricaoRemedio {
 
 	int id;
-	String usuario;
-	Date dtInicio;
-	Integer qtdDias;
-	Integer qtdVezesDia;
-	String dosagem;
-	String nomeRemedio;
-	HorarioRemedio horarioRemedio;
-	List<Time> listaHorarioRemedio;
+	String usuario,nomeRemedio;
+	String dtInicio, hrInicio;
+	Integer qtdDias, qtdVezesDia;
+	String tipoDosagem, dosagem;
+
 
 	public PrescricaoRemedio() {
-	}
 
-	public HorarioRemedio getHorarioRemedio() {
-		return horarioRemedio;
 	}
 
 	public int getId() {
@@ -31,26 +22,6 @@ public class PrescricaoRemedio {
 		this.id = id;
 	}
 
-	public void setHorarioRemedio(HorarioRemedio horarioRemedio) {
-		this.horarioRemedio = horarioRemedio;
-	}
-
-	public void setQtdDias(Integer qtdDias) {
-		this.qtdDias = qtdDias;
-	}
-
-	public void setQtdVezesDia(Integer qtdVezesDia) {
-		this.qtdVezesDia = qtdVezesDia;
-	}
-
-	public void setDosagem(String dosagem) {
-		this.dosagem = dosagem;
-	}
-
-	public String getDosagem() {
-		return dosagem;
-	}
-
 	public String getUsuario() {
 		return usuario;
 	}
@@ -59,28 +30,52 @@ public class PrescricaoRemedio {
 		this.usuario = usuario;
 	}
 
-	public Date getDtInicio() {
+	public String getDtInicio() {
 		return dtInicio;
 	}
 
-	public void setDtInicio(Date dtInicio) {
+	public void setDtInicio(String dtInicio) {
 		this.dtInicio = dtInicio;
 	}
 
-	public int getQtdDias() {
+	public String getHrInicio() {
+		return hrInicio;
+	}
+
+	public void setHrInicio(String hrInicio) {
+		this.hrInicio = hrInicio;
+	}
+
+	public Integer getQtdDias() {
 		return qtdDias;
 	}
 
-	public void setQtdDias(int qtdDias) {
+	public void setQtdDias(Integer qtdDias) {
 		this.qtdDias = qtdDias;
 	}
 
-	public int getQtdVezesDia() {
+	public Integer getQtdVezesDia() {
 		return qtdVezesDia;
 	}
 
-	public void setQtdVezesDia(int qtdVezesDia) {
+	public void setQtdVezesDia(Integer qtdVezesDia) {
 		this.qtdVezesDia = qtdVezesDia;
+	}
+
+	public String getTipoDosagem() {
+		return tipoDosagem;
+	}
+
+	public void setTipoDosagem(String tipoDosagem) {
+		this.tipoDosagem = tipoDosagem;
+	}
+
+	public String getDosagem() {
+		return dosagem;
+	}
+
+	public void setDosagem(String dosagem) {
+		this.dosagem = dosagem;
 	}
 
 	public String getNomeRemedio() {
@@ -90,17 +85,8 @@ public class PrescricaoRemedio {
 	public void setNomeRemedio(String nomeRemedio) {
 		this.nomeRemedio = nomeRemedio;
 	}
-
-	public List<Time> getListaHorarioRemedio() {
-		return listaHorarioRemedio;
-	}
-
-	public void setListaHorarioRemedio(List<Time> listaHorarioRemedio) {
-		this.listaHorarioRemedio = listaHorarioRemedio;
-	}
-
-	public List<Time> sugerirHorario() {
-		return listaHorarioRemedio;
-	}
-
+	
+	
+	
+	
 }

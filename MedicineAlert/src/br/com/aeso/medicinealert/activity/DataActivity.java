@@ -33,7 +33,6 @@ public class DataActivity extends Activity {
 			public void onClick(View v) {
 				Intent intent = new Intent(DataActivity.this,CadastraRemedioActivity.class);
 				data = dataPiker.getDayOfMonth()+"/"+dataPiker.getMonth()+"/"+dataPiker.getYear();
-				//Date dataIncio = new Date(dataPiker.getDayOfMonth(), dataPiker.getMonth(), dataPiker.getYear());
 				intent.putExtra("Data de ínicio do remédio", data);
 				startActivity(intent);
 			}

@@ -30,7 +30,7 @@ public class HoraActivity extends Activity {
 			public void onClick(View v) {
 				Intent intent = new Intent(HoraActivity.this,CadastraRemedioActivity.class);
 				hora = timerPiker.getCurrentHour()+":"+timerPiker.getCurrentMinute();
-				intent.putExtra("Hora de ínicio do remédio", hora);
+				intent.putExtra("Hora", hora);
 				startActivity(intent);
 			}
 		});
