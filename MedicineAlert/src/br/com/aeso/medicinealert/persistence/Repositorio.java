@@ -3,6 +3,8 @@ package br.com.aeso.medicinealert.persistence;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.aeso.medicinealert.entities.PrescricaoRemedio;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -34,18 +36,16 @@ public class Repositorio {
 		this.insertStmt = this.db.compileStatement(INSERT);
 	}
 
-	public void inserir(String usuario, String nomeRemedio, int qtdDias,
-			int qtdVezesDias, String tipoDosagem, float dosagem,
-			String dtInicio, String hrInicio) {
+	public void inserir(PrescricaoRemedio remedio) {
 		
-		this.insertStmt.bindString(1, usuario);
-		this.insertStmt.bindString(2, nomeRemedio);
-		this.insertStmt.bindLong(3, qtdDias);
-		this.insertStmt.bindLong(4, qtdVezesDias);
-		this.insertStmt.bindString(5, tipoDosagem);
-		this.insertStmt.bindDouble(6, dosagem);
-		this.insertStmt.bindString(7, dtInicio);
-		this.insertStmt.bindString(8, hrInicio);
+		this.insertStmt.bindString(1, remedio.getUsuario());
+		this.insertStmt.bindString(2, remedio.getNomeRemedio());
+		this.insertStmt.bindLong(3, remedio.getQtdDias());
+		this.insertStmt.bindLong(4, remedio.getQtdVezesDia());
+		this.insertStmt.bindString(5, remedio.getTipoDosagem());
+		this.insertStmt.bindDouble(6, remedio.getDosagem());
+		this.insertStmt.bindString(7, remedio.getDtInicio());
+		this.insertStmt.bindString(8, remedio.getHrInicio());
 		this.insertStmt.executeInsert();
 	}
 

@@ -13,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 import br.com.aeso.medicinealert.R;
 import br.com.aeso.medicinealert.entities.PrescricaoRemedio;
+import br.com.aeso.medicinealert.persistence.Repositorio;
 
 public class CadastraRemedioActivity extends Activity {
 
@@ -20,15 +21,16 @@ public class CadastraRemedioActivity extends Activity {
 			edtDosagem;
 	private Button btnSalvar;
 	private ImageButton btnData, btnHora;
-	private String data, hora, tipoDosagem = null;
+	private String data, hora, tipoDosagem;
 	PrescricaoRemedio prescricaoRemedio;
+	Repositorio rep;
 	// private OpenHelper helper;
 
 	private OnClickListener onClickSalvar = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
 			prescricaoRemedio = new PrescricaoRemedio();
-
+			// validando dados para inserir o objeto no banco
 			if (ValidaEditText("nomeUsuario", edtNomeUsuario) != false) {
 				prescricaoRemedio.setUsuario(edtNomeUsuario.getText()
 						.toString());
@@ -41,19 +43,16 @@ public class CadastraRemedioActivity extends Activity {
 			} else if (ValidaEditText("vezesDia", edtVezesDia) != false) {
 				prescricaoRemedio.setQtdVezesDia(Integer.parseInt(edtVezesDia
 						.getText().toString()));
-			}else if (ValidaEditText("tipoDosagem", edtDosagem) != false) {
-				// verificar o tipo da dosagem
-				prescricaoRemedio.setDosagem(edtVezesDia.getText().toString()); 
 			}else if (ValidaEditText("dosagem", edtDosagem) != false) {
-				// verificar o tipo da dosagem
-				prescricaoRemedio.setDosagem(edtVezesDia.getText().toString());
+				prescricaoRemedio.setTipoDosagem(tipoDosagem);
+				prescricaoRemedio.setDosagem(Double.valueOf(edtDosagem.getText().toString()));
 			}
-			// setar no objeto a data e hora de inicio para tomar o remedio
-			// chamar o repositorio para poder salvar no banco
+			prescricaoRemedio.setDtInicio(data);
+			prescricaoRemedio.setHrInicio(hora);
+			rep.inserir(prescricaoRemedio);
 			Toast t = new Toast(getApplicationContext());
 			t.setText("Remédio cadastrado");
 			t.show();
-
 		}
 	};
 

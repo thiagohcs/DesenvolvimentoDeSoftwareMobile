@@ -7,7 +7,8 @@ public class PrescricaoRemedio {
 	String usuario,nomeRemedio;
 	String dtInicio, hrInicio;
 	Integer qtdDias, qtdVezesDia;
-	String tipoDosagem, dosagem;
+	String tipoDosagem;
+	Double dosagem;
 
 
 	public PrescricaoRemedio() {
@@ -70,11 +71,11 @@ public class PrescricaoRemedio {
 		this.tipoDosagem = tipoDosagem;
 	}
 
-	public String getDosagem() {
+	public Double getDosagem() {
 		return dosagem;
 	}
 
-	public void setDosagem(String dosagem) {
+	public void setDosagem(Double dosagem) {
 		this.dosagem = dosagem;
 	}
 
