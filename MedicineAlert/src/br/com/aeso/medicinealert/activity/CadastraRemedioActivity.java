@@ -20,11 +20,41 @@ public class CadastraRemedioActivity extends Activity {
 	private Button btnSalvar;
 	private RadioGroup radioOpcoesDosagem;
 	private ImageButton btnData, btnHora;
-	private String nomeRemedio, nomeUsuario, dosagem; 
+	private String nomeRemedio, nomeUsuario, dosagem, data, hora; 
 	Integer qtDias, vezesDia;
 	PrescricaoRemedio prescricaoRemedio;
 	// private OpenHelper helper;
 
+	
+	private OnClickListener onClickSalvar = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			prescricaoRemedio = new PrescricaoRemedio();
+//			data = this.getIntent().getStringExtra("Data", 0);
+//			hora = this.getIntent().getStringExtra("Hora",0);
+			
+			
+			if(ValidaEditText("nomeUsuario", edtNomeUsuario) != false){
+				prescricaoRemedio.setUsuario(edtNomeUsuario.getText().toString());
+			}else if(ValidaEditText("nomeRemedio", edtNomeRemedio) != false){
+				prescricaoRemedio.setNomeRemedio(edtNomeRemedio.getText().toString());
+			}else if (ValidaEditText("qtDias", edtQtDias) != false){
+				prescricaoRemedio.setQtdDias(Integer.parseInt(edtQtDias.getText().toString()));
+			}else if (ValidaEditText("vezesDia", edtVezesDia) != false){
+				prescricaoRemedio.setQtdVezesDia(Integer.parseInt(edtVezesDia.getText().toString()));
+			}else if (ValidaEditText("dosagem", edtDosagem) != false){
+				// verificar o tipo da dosagem
+				prescricaoRemedio.setDosagem(edtVezesDia.getText().toString());
+			}
+			// setar no objeto a data e hora de inicio para tomar o remedio
+			// chamar o repositorio para poder salvar no banco
+			Toast t = new Toast(getApplicationContext());
+			t.setText("Remédio cadastrado");
+			t.show();
+			
+		}
+	};
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,30 +88,7 @@ public class CadastraRemedioActivity extends Activity {
 			}
 		});
 		
-		btnSalvar.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				prescricaoRemedio = new PrescricaoRemedio();
-				
-				if(ValidaEditText("nomeUsuario", edtNomeUsuario) != false){
-					prescricaoRemedio.setUsuario(edtNomeUsuario.getText().toString());
-				}else if(ValidaEditText("nomeRemedio", edtNomeRemedio) != false){
-					prescricaoRemedio.setNomeRemedio(edtNomeRemedio.getText().toString());
-				}else if (ValidaEditText("qtDias", edtQtDias) != false){
-					prescricaoRemedio.setQtdDias(Integer.parseInt(edtQtDias.getText().toString()));
-				}else if (ValidaEditText("vezesDia", edtVezesDia) != false){
-					prescricaoRemedio.setQtdVezesDia(Integer.parseInt(edtVezesDia.getText().toString()));
-				}else if (ValidaEditText("dosagem", edtDosagem) != false){
-					// verificar o tipo da dosagem
-					prescricaoRemedio.setDosagem(edtVezesDia.getText().toString());
-				}
-				// setar no objeto a data e hora de inicio para tomar o remedio
-				// chamar o repositorio para poder salvar no banco
-				Toast t = new Toast(getApplicationContext());
-				t.setText("Remédio cadastrado");
-				t.show();
-			}
-		});
+		btnSalvar.setOnClickListener(onClickSalvar);
 	}
 	
 	@Override

@@ -112,16 +112,6 @@
             android:contentDescription="@string/datePiker"
             android:src="@drawable/calendario2" />
 
-        <Button
-            android:id="@+id/btnSalvar"
-            style="@style/buttonStyle"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/btnHora"
-            android:layout_marginTop="21dp"
-            android:text="@string/salvar" />
-
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
@@ -142,6 +132,16 @@
             android:layout_marginTop="18dp"
             android:text="@string/Hora"
             android:textSize="7pt" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            style="@style/buttonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="16dp"
+            android:text="@string/salvar" />
 
     </RelativeLayout>
 
