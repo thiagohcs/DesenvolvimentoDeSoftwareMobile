@@ -82,6 +82,7 @@ public class CadastraRemedioActivity extends Activity {
 			prescricaoRemedio.setDtInicio(dataIncio);
 			prescricaoRemedio.setHrInicio(horaInicio);
 			
+			
 			if(!(prescricaoRemedio.getUsuario().equals(null) && 
 					prescricaoRemedio.getNomeRemedio().equals(null)&&
 					prescricaoRemedio.getQtdDias().equals(null)&&
@@ -91,7 +92,7 @@ public class CadastraRemedioActivity extends Activity {
 					prescricaoRemedio.getDtInicio().equals(null)&&
 					prescricaoRemedio.getHrInicio().equals(null))){
 					
-					//rep.inserir(prescricaoRemedio);
+					rep.inserir(prescricaoRemedio);
 					messagem("Remédio cadastrado");
 			}else{
 				messagem("Existem campos que não foram preenchidos");
@@ -132,7 +133,7 @@ public class CadastraRemedioActivity extends Activity {
 		btnData = (ImageButton) findViewById(R.id.btnData);
 		btnHora = (ImageButton) findViewById(R.id.btnHora);
 		btnSalvar = (Button) findViewById(R.id.btnSalvar);
-		
+		rep = new BDHelper(getApplicationContext());
 		int idRadioSelecionado = ((RadioGroup) findViewById(R.id.radioOpcoesDosagem))
 				.getCheckedRadioButtonId();
 		if (idRadioSelecionado == R.id.radioComprimido) {
