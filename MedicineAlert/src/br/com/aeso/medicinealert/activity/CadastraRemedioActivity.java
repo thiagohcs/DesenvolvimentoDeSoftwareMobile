@@ -170,29 +170,29 @@ public class CadastraRemedioActivity extends Activity {
 	}
 
 	// Método genérico para verificar se existe algum editText vazio e mostrar um Toast com o erro
-	public boolean ValidaEditText(String nomeCampo, EditText campo) {
-		if (nomeCampo.equals("nomeUsuario")&& campo.toString().trim().equals("")|| campo.toString().equals(null)) {
-			messagem("O nome do usuário não foi informado");
-			return false;
-		} else if (nomeCampo.equals("nomeRemedio")&& campo.toString().trim().equals("")|| campo.toString().equals(null)) {
-			messagem("O nome do remédio não foi informado");
-			return false;
-		} else if (nomeCampo.equals("qtDias") && campo.toString().trim().equals("") || campo.toString().equals(null)) {
-			messagem("A quantidade de dias não foi informado");
-			return false;
-		} else if (nomeCampo.equals("vezesDia")
-				&& campo.toString().trim().equals("")
-				|| campo.toString().equals(null)) {
-			messagem("A quantidade de vezes ao dia não foi informado");
-			return false;
-		} else if (nomeCampo.equals("dosagem")
-				&& campo.toString().trim().equals("")
-				|| campo.toString().equals(null)) {
-			messagem("A dosagem não foi informado");
-			return false;
-		}
-		return true;
-	}
+//	public boolean ValidaEditText(String nomeCampo, EditText campo) {
+//		if (nomeCampo.equals("nomeUsuario")&& campo.toString().trim().equals("")|| campo.toString().equals(null)) {
+//			messagem("O nome do usuário não foi informado");
+//			return false;
+//		} else if (nomeCampo.equals("nomeRemedio")&& campo.toString().trim().equals("")|| campo.toString().equals(null)) {
+//			messagem("O nome do remédio não foi informado");
+//			return false;
+//		} else if (nomeCampo.equals("qtDias") && campo.toString().trim().equals("") || campo.toString().equals(null)) {
+//			messagem("A quantidade de dias não foi informado");
+//			return false;
+//		} else if (nomeCampo.equals("vezesDia")
+//				&& campo.toString().trim().equals("")
+//				|| campo.toString().equals(null)) {
+//			messagem("A quantidade de vezes ao dia não foi informado");
+//			return false;
+//		} else if (nomeCampo.equals("dosagem")
+//				&& campo.toString().trim().equals("")
+//				|| campo.toString().equals(null)) {
+//			messagem("A dosagem não foi informado");
+//			return false;
+//		}
+//		return true;
+//	}
 	
 	public Toast messagem(CharSequence text){
 		Context context = getApplicationContext();
